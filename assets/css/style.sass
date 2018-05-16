@@ -24,27 +24,30 @@ body
 
 
 a
-  color: pink
+  color: white
 
   text-decoration: none
 
+//darkblue background//
+.bbackground
+  background-color: $darkblue
 
 //grey background //
 .gbackground
   background-color: $grey
-  padding-top: 5%
+  padding-top: 2em
+
+
 
   //video part//
   .video
-    width: 90%
     height: 200px
-    margin-left: 5%
-    margin-top: 5%
+    margin: 1em
     background-color: $yellow
-    margin-bottom: 5%
+
   p
-    margin-left: 5%
-    margin-right: 5%
+    margin-left: 1em
+    margin-right: 1em
     font-weight: bold
 
 
@@ -54,23 +57,23 @@ header
 
   .logo
     width: 50%
-    margin-left: 5%
+    margin-left: 1em
 
   .toggler
   nav
     background: linear-gradient(180deg, #262E41 40%, #F3AC96 97.79%)
     text-align: right
-    padding-right: 5%
-    padding-left: 5%
+    padding-right: 1em
+    padding-left: 1em
     height: 100vh
 
     .minilogo
       display: block
-      margin-left: 5%
-      margin-top: 5%
+      margin-left: 1em
+      padding-top: 1em
       width: 10%
       padding-left: 0px
-      margin-bottom: 25%
+      margin-bottom: 3em
 
     a
       font-size: 1rem
@@ -80,7 +83,7 @@ header
         font-size: 1.4rem
       p
         font-weight: normal
-        padding-bottom: 15%
+        padding-bottom: 3em
         color: white
 
     .someicon
@@ -91,3 +94,55 @@ header
 //header end//
 
 //buy button//
+.buybutton
+  background-color: $darkblue
+  color: white
+  display: flex
+  justify-content: space-around
+  // position: fixed
+  // bottom: 0
+  .button
+    background: linear-gradient(90deg, #F4DA98 50%, #F4C997 100%)
+    color: $darkblue
+    padding: 1.5em
+    width: 40%
+    margin: 1em 0
+    // margin should be a fixed value: px, em, rem
+    text-transform: uppercase
+    letter-spacing: 3px
+  p
+    padding-left: 1em
+    // padding should be a fixed value: px, em, rem
+    letter-spacing: 3px
+    text-align: center
+    // margin should be a fixed value: px, em, rem
+    margin-top: 1.5em
+
+//matress img
+.mattress
+  max-width: 100%
+
+//flag img
+.flag
+  max-width: 100%
+
+//scrollytelling
+.scrolly
+  h1
+    padding-left: 1em
+  h3
+    font-weight: bold
+    padding: 1em
+    font-size: 1.2em
+
+
+
+//contact info//
+
+p
+  font-weight: normal
+
+
+h1
+  font-weight: 800
+  font-size: 1.3rem
