@@ -20,13 +20,35 @@ $pink: #F3AC96
 //general styles
 body
   font: 16px 'Inter UI'
-  font-style: normal
-
 
 a
   color: white
-
   text-decoration: none
+
+button
+  white-space: nowrap
+  border: none
+  font-weight: black
+
+
+h1
+  font-size: 1.602rem
+  font-weight: 800
+
+h2
+  font-size: 1.602rem
+
+h3
+  font-size: 1.424rem
+
+h4
+  font-size: 1.266rem
+
+h5
+  font-size: 1.125rem
+
+h6
+  font-size: 1rem
 
 //darkblue background//
 .bbackground
@@ -39,16 +61,8 @@ a
 
 
 
-  //video part//
-  .video
-    height: 200px
-    margin: 1em
-    background-color: $yellow
 
-  p
-    margin-left: 1em
-    margin-right: 1em
-    font-weight: bold
+
 
 
 
@@ -76,11 +90,9 @@ header
       margin-bottom: 3em
 
     a
-      font-size: 1rem
       h3
         font-weight: bold
         color: white
-        font-size: 1.4rem
       p
         font-weight: normal
         padding-bottom: 3em
@@ -91,32 +103,78 @@ header
       padding: 10px
       margin-left: 10px
       margin-top: 50px
-//header end//
 
-//buy button//
+
+.intropage
+
+  .video
+    height: 200px
+    margin: 1em
+    background-color: $yellow
+
+  p
+    margin-left: 1em
+    margin-right: 1em
+    font-weight: bold
+
+  .badgebox
+    display: flex
+    justify-content: stretch
+    flex-direction: row
+    .badge
+      // background-image: url("../img/badge.svg")
+      // background-size: contain
+      // background-repeat: no-repeat
+      padding: .5rem
+      color: white
+      text-align: center
+      flex-grow: 10
+      position: relative
+      // &:after
+      //   content: ""
+      //   display: block
+      //   padding-bottom: 100%
+      img
+        width: 100%
+      p
+        position: absolute
+        margin: 0
+
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+//buy button
 .buybutton
   background-color: $darkblue
   color: white
   display: flex
   justify-content: space-around
-  // position: fixed
-  // bottom: 0
+  align-items: center
+  position: fixed
+  bottom: 0
+  width: 100%
   .button
     background: linear-gradient(90deg, #F4DA98 50%, #F4C997 100%)
     color: $darkblue
     padding: 1.5em
+    padding-top: .8em
+    padding-bottom: .8em
     width: 40%
-    margin: 1em 0
+    margin: 0.5em 0
     // margin should be a fixed value: px, em, rem
     text-transform: uppercase
     letter-spacing: 3px
+    font-weight: bold
+
   p
     padding-left: 1em
     // padding should be a fixed value: px, em, rem
     letter-spacing: 3px
     text-align: center
     // margin should be a fixed value: px, em, rem
-    margin-top: 1.5em
+
+
 
 //matress img
 .mattress
@@ -131,10 +189,7 @@ header
   width: 1.5rem
   height: 1.5rem
 
-//newsletter signup
-.newsletter
-  h3
-    color: white
+
 
 //scrollytelling
 .scrolly
@@ -143,12 +198,19 @@ header
   padding-bottom: 1em
   h1
     padding-left: 1em
-  h3
-    font-weight: bold
-    padding: 0 1em 0 1em
-    text-transform: uppercase
-  p
-    font-weight: normal
+    margin-top: 1em
+    margin-bottom: 1em
+  .border
+    border-left: 1px solid white
+    margin-left: 2em
+    margin-bottom: 3em
+    h3
+      font-weight: bold
+      text-transform: uppercase
+      padding-left: 1em
+    p
+      font-weight: normal
+      padding-left: 1em
 
 
 //About company//
@@ -157,28 +219,34 @@ header
   padding-left: 1em
   background-color: $grey
   h1
-    font-weight: 800
-
+    margin-bottom: 1em
+    margin-top: 1em
   p
     font-weight: normal
   .read
     text-transform: uppercase
     border: none
-    padding-top: 2em
+    padding: 2em 0
     background: transparent
-    
-
-
-
-
 
 
 
 // Contact info //
 .contactinfo
+  padding-left: 1em
   h1
-    padding-left: 1em
+
+    margin-bottom: 1em
+    padding-top: 1em
     font-weight: 800
-  p
-    font-weight: normal
-    padding-left: 1em
+    color: white
+
+  .someicon
+    display: inline-block
+    margin-right: 0.5rem
+    padding-top: 0.5em
+
+//newsletter signup
+.newsletter
+  h3
+    color: white
