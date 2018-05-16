@@ -30,7 +30,6 @@ button
   border: none
   font-weight: black
 
-
 h1
   font-size: 1.602rem
   font-weight: 800
@@ -49,6 +48,9 @@ h5
 
 h6
   font-size: 1rem
+
+section
+  padding: 2rem 1rem
 
 //darkblue background//
 .bbackground
@@ -70,16 +72,44 @@ h6
 header
 
   .logo
-    width: 50%
-    margin-left: 1em
+    width: 150px
+    display: block
+    margin: 1em auto
 
   .toggler
+    position: fixed
+    z-index: 55
+    top: 1rem
+    left: 1rem
+    font-size: 2rem
+    cursor: pointer
+    &::after
+      content: "☰"
+    &.open
+      right: 1rem
+      left: initial
+      &::after
+        content: "✕"
+        color: white
+
   nav
     background: linear-gradient(180deg, #262E41 40%, #F3AC96 97.79%)
     text-align: right
     padding-right: 1em
     padding-left: 1em
     height: 100vh
+
+    @media screen and (max-width: 600px)
+      position: fixed
+      z-index: 50
+      top: 0
+      left: 0
+      transition: transform .2s ease-in
+      transform: translateX(-100%)
+      &.open
+        transform: translateX(0%)
+
+
 
     .minilogo
       display: block
@@ -111,6 +141,8 @@ header
     height: 200px
     margin: 1em
     background-color: $yellow
+    img
+      width: 100%
 
   p
     margin-left: 1em
@@ -154,6 +186,7 @@ header
   position: fixed
   bottom: 0
   width: 100%
+  padding: .5rem
   .button
     background: linear-gradient(90deg, #F4DA98 50%, #F4C997 100%)
     color: $darkblue
