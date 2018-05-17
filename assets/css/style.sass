@@ -20,15 +20,8 @@ $pink: #F3AC96
 //general styles
 body
   font: 16px 'Inter UI'
-
-a
-  color: white
-  text-decoration: none
-
-button
-  white-space: nowrap
-  border: none
-  font-weight: black
+  max-width: 100vw
+  overflow-x: hidden
 
 h1
   font-size: 1.602rem
@@ -48,6 +41,29 @@ h5
 
 h6
   font-size: 1rem
+
+p
+  line-height: 1.5em
+
+a
+  color: white
+  text-decoration: none
+
+button, input[type='submit']
+  white-space: nowrap
+  border: none
+  font-weight: black
+  padding: .8em 1.5em
+  margin: 0.5em 0
+  text-transform: uppercase
+  letter-spacing: 3px
+  font-weight: bold
+  cursor: pointer
+
+input[type='text']
+  border: none
+  padding: .8em 1.5em
+  margin: 0.5em 0
 
 section
   padding: 2rem 1rem
@@ -144,68 +160,55 @@ header
     img
       width: 100%
 
-  p
+  > p
     margin-left: 1em
     margin-right: 1em
-    font-weight: bold
+    padding-bottom: 1rem
+    em
+      font-weight: 600
 
   .badgebox
     display: flex
     justify-content: stretch
     flex-direction: row
     .badge
-      // background-image: url("../img/badge.svg")
-      // background-size: contain
-      // background-repeat: no-repeat
       padding: .5rem
       color: white
       text-align: center
       flex-grow: 10
       position: relative
-      // &:after
-      //   content: ""
-      //   display: block
-      //   padding-bottom: 100%
       img
         width: 100%
       p
         position: absolute
         margin: 0
+        font-size: 4vw
 
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
 
 //buy button
-.buybutton
-  background-color: $darkblue
-  color: white
-  display: flex
-  justify-content: space-around
-  align-items: center
-  position: fixed
-  bottom: 0
-  width: 100%
-  padding: .5rem
-  .button
-    background: linear-gradient(90deg, #F4DA98 50%, #F4C997 100%)
-    color: $darkblue
-    padding: 1.5em
-    padding-top: .8em
-    padding-bottom: .8em
-    width: 40%
-    margin: 0.5em 0
-    // margin should be a fixed value: px, em, rem
-    text-transform: uppercase
-    letter-spacing: 3px
-    font-weight: bold
-
-  p
-    padding-left: 1em
-    // padding should be a fixed value: px, em, rem
-    letter-spacing: 3px
-    text-align: center
-    // margin should be a fixed value: px, em, rem
+.buy-container
+  position: relative
+  .buybutton
+    background-color: $darkblue
+    color: white
+    display: flex
+    justify-content: space-around
+    align-items: center
+    position: sticky
+    left: 0
+    bottom: 0
+    width: 100%
+    padding: .5rem
+    .button
+      background: linear-gradient(90deg, #F4DA98 50%, #F4C997 100%)
+      color: $darkblue
+      width: 40%
+    p
+      letter-spacing: 3px
+      text-align: center
 
 
 
