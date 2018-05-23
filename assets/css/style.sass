@@ -107,7 +107,8 @@ header
       &::after
         content: "✕"
         color: white
-
+.navtablet
+  display: none
   nav
     background: linear-gradient(180deg, #262E41 40%, #F3AC96 97.79%)
     text-align: right
@@ -286,3 +287,25 @@ header
 .newsletter
   h3
     color: white
+
+
+// tablet version - don't do it here though, do it where the ELEMENT is //
+// We'll do it tomorrow, so you'll be here. We'll work on other things for now
+
+//@media screen and (min-width: 768px)
+     tablet-properties: blabal
+
+
+//@media screen and (min-width: 1024px)
+    desktop-properties: balasdasda
+
+
+// you can do things like:
+
+// element
+//   @media screen and (min-width: 768px)
+//     tablet-properties: blabal
+//   @media screen and (min-width: 1024px)
+//     desktop-properties: balasdasda
+
+// i think it's easier to read :)
