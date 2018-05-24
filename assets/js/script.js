@@ -1,14 +1,11 @@
 //everything that needs the html to be ready
+// if 'start' is pressed show only section id=audio
 $(document).ready(function() {
+    // if page is loaded then only show the frontpage
+  $(".hidden" ).hide();
 
-    //menu toggler: function
-    const toggleMenu = function() {
-        $('.toggler').toggleClass('open');
-        $('nav').toggleClass('open');
-    }
-
-    // menu toggler: listeners
-    $('.toggler').on('click', toggleMenu);
-    $('nav a').on('click', toggleMenu);
-
+   $("#readmore1").click(function() {
+       $("#readmore1").hide();
+       $(".hidden").show();
+   });
 });
