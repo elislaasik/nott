@@ -74,8 +74,23 @@ section
 
 //grey background //
 .gbackground
-  background-color: $grey
+  
   padding-top: 2em
+  position: relative
+
+.gbackground:after 
+  content: ''
+  background-image: url('../img/hexgrey.svg')
+  background-size: contain
+  background-repeat: repeat-y
+  opacity: 0.1
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  position: absolute
+  z-index: -1
+    
 
 
 
@@ -83,17 +98,28 @@ section
 // header //
 
 .intropage
-
+    
   header
     @media screen and (min-width: 500px)
       display: flex
       justify-content: space-between
       align-items: center
+      
+      
+      
+    
+    
+    .price
+        display: none
+        @media screen and (min-width: 500px)
+            display: inline-block
+            
+        
 
     .logo
       width: 6.5em
       display: block
-      margin: 1em auto
+      margin: 1em 
       margin-top: .1em
       margin-bottom: 2em
     .buybutton2
@@ -101,12 +127,18 @@ section
       @media screen and (min-width: 500px)
         display: inline-flex
         background: linear-gradient(90deg, #F4DA98 50%, #F4C997 100%)
+      @media screen and (min-width: 900px)
+        padding: 1em 1.5em
 
   .columns
+   
     @media screen and (min-width: 500px)
       display: flex
       align-items: center
-
+    
+    @media screen and (min-width: 900px)
+        
+    
     .video
       margin: 1em
       background-color: $yellow
@@ -121,15 +153,19 @@ section
       padding-bottom: 1rem
       em
         font-weight: 600
+    
+    .rightside
+        @media screen and (min-width: 900px)
+            width: 40%
 
-    .introtext
-        padding-top: 2em
-        h3
-          text-align: center
-          font-weight: bold
+        .introtext
+            padding-top: 2em
+            h3
+                text-align: center
+                font-weight: bold
 
-        h4
-          text-align: center
+            h4
+                text-align: center
 
     .badgebox
       display: flex
@@ -145,7 +181,7 @@ section
         position: relative
 
         img
-          max-width: 100px
+          max-width: 80px
           width: 100%
 
 .hexgrey
@@ -236,6 +272,24 @@ section
           padding-left: 1em
           padding-top: 1em
 
+        //features
+        
+.specific
+    @media screen and (min-width: 500px)
+        display: flex
+        align-items: flex-start
+    .feature
+        display: flex
+    
+        .ftext 
+            padding: 1.2em
+            h3
+                font-size: 1em
+                text-transform: uppercase
+                font-weight: bold
+            p
+                text-transform: uppercase
+    
 
 footer
   display: flex
