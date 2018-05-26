@@ -90,7 +90,7 @@ section
   z-index: 50
 
   position: relative
-  &:before 
+  &:before
     content: ''
     background-image: url('../img/hexgrey.svg')
     background-size: contain
@@ -117,7 +117,7 @@ section
     .logo
       width: 6.5em
       display: block
-      margin: 1em 
+      margin: 1em
       margin-top: .1em
       margin-bottom: 2em
     .buybutton2
@@ -133,10 +133,10 @@ section
     @media screen and (min-width: 500px)
       display: flex
       align-items: center
-    
+
     @media screen and (min-width: 900px)
-        
-    
+
+
     .video
       margin: 1em
       background-color: $yellow
@@ -151,7 +151,7 @@ section
       padding-bottom: 1rem
       em
         font-weight: 600
-    
+
     .rightside
         @media screen and (min-width: 900px)
             width: 40%
@@ -221,7 +221,7 @@ section
     position: relative
 
     // background-attachment: fixed
-    
+
     // &:nth-of-type(3)
     //   background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/hMH8tD4/natural-background-blurred-tree-in-golden-light-with-bokeh_hpgusoje7__F0000.png)
 
@@ -232,7 +232,7 @@ section
       height: 100%
       clip: rect(0, auto, auto, 0)
 
-      img
+      > img
         position: fixed
 
         top: 50%
@@ -250,12 +250,13 @@ section
         h3
           font-weight: bold
           text-transform: uppercase
-          padding-left: 1em
           font-size: 1.602rem
         p
           font-weight: normal
-          padding-left: 1em
           padding-top: 1em
+
+        .clipicon
+          padding-bottom: 1em
 
         //features
   position: relative
@@ -279,7 +280,7 @@ section
     p
       letter-spacing: 3px
       text-align: center
-        
+
 .specific
     padding: 2em
     background: #07314A
@@ -299,14 +300,14 @@ section
 
         img
           margin: 1rem
-    
-        .ftext 
+
+        .ftext
             h3
                 text-transform: uppercase
                 font-weight: bold
             p
                 text-transform: uppercase
-    
+
 
 footer
   display: flex
