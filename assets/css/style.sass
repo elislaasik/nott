@@ -17,6 +17,7 @@ $grey: #EFEFEF
 $yellow: #F4DA98
 $pink: #F3AC96
 
+
 /* EXTENDS */
 
 %container
@@ -204,7 +205,6 @@ section
 //scrollytelling
 .scrolly
   color: white
-  background: linear-gradient(180deg, #07314A 0%, #63869B 97.79%)
   padding: 0
   h1
     padding-left: 1em
@@ -212,13 +212,96 @@ section
     margin-bottom: 1em
 
   .slide
-    height: 120vh
+    height: 130vh
     position: relative
+    // box-shadow: inset 0 0 5rem 0px rgba(0,0,0,.5)
 
     // background-attachment: fixed
 
-    // &:nth-of-type(3)
-    //   background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/hMH8tD4/natural-background-blurred-tree-in-golden-light-with-bokeh_hpgusoje7__F0000.png)
+
+    &:nth-of-type(1)
+      // z-index: 5
+      background: linear-gradient(180deg, #07314A 0%, #F3AC96 97.79%)
+
+    &:nth-of-type(2)
+      // z-index: 4
+      background: linear-gradient(180deg, #F3AC96 0%, #F4C997 100%)
+
+      position: relative
+      &:after
+        content: ''
+        background-image: url('../img/cloud.png')
+        background-size: contain
+        background-position: 100% 100%
+        background-repeat: no-repeat
+        opacity: 0.5
+        top: 0
+        left: 20%
+        width: 100%
+        height: 100%
+        position: absolute
+        z-index: 0
+
+    &:nth-of-type(3)
+      // z-index: 3
+      background-image: linear-gradient(0deg, #F3AC96 0%,  #F4C997 100%)
+
+      position: relative
+      &:after
+        content: ''
+        background-image: url('../img/leaves.png')
+        background-size: contain
+        background-position: 100% 100%
+        background-repeat: no-repeat
+        opacity: 0.9
+        top: 0
+        right: 65%
+        width: 120%
+        height: 100%
+        position: absolute
+        z-index: 0
+
+      color: black
+      button
+        background: black
+        color: white
+
+        
+
+    &:nth-of-type(4)
+      // z-index: 2
+      background: linear-gradient(0deg, #262E41 0%, #F3AC96 97.79%)
+
+      position: relative
+      &:after
+        content: ''
+        background-image: url('../img/hexgrey.svg')
+        background-size: contain
+        background-repeat: repeat-y
+        opacity: 0.1
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: 0
+
+    &:nth-of-type(5)
+      // z-index: 1
+      background: linear-gradient(0deg, #07314A 0%, #262E41 97.79%)
+
+      position: relative
+      &:after
+        content: ''
+        background-image: url('../img/stars.svg')
+        background-size: contain
+        background-repeat: repeat-y
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: 0
 
 
     .clip
@@ -226,17 +309,18 @@ section
       width: 100%
       height: 100%
       clip: rect(0, auto, auto, 0)
+      z-index: 5
 
       > img
         position: fixed
 
-        top: 50%
+        top: 45%
         left: 50%
         transform: translate(-50%, -100%)
 
       .border
         position: fixed
-        top: 50%
+        top: 45%
         left: 50%
         transform: translateX(-50%)
         width: calc(100% - 2rem)
@@ -278,7 +362,8 @@ section
 
 .specific
     padding: 2em
-    background: #07314A
+    background: linear-gradient(180deg, #F4DA98 0%, #F4C997 100%)
+    color: black
     @media screen and (min-width: 500px)
         display: flex
         align-items: flex-start
