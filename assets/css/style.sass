@@ -221,11 +221,24 @@ section
 
     &:nth-of-type(1)
       // z-index: 5
-      background: linear-gradient(180deg, #07314A 0%, #F3AC96 97.79%)
+      background: linear-gradient(0deg, #07314A 0%, #262E41 97.79%)
+
+      position: relative
+      &:after
+        content: ''
+        background-image: url('../img/stars.svg')
+        background-size: contain
+        background-repeat: repeat-y
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: 0
 
     &:nth-of-type(2)
       // z-index: 4
-      background: linear-gradient(180deg, #F3AC96 0%, #F4C997 100%)
+      background: linear-gradient(180deg, #07314A 0%, #F3AC96 100%)
 
       position: relative
       &:after
@@ -243,8 +256,25 @@ section
         z-index: 0
 
     &:nth-of-type(3)
-      // z-index: 3
-      background-image: linear-gradient(0deg, #F3AC96 0%,  #F4C997 100%)
+      // z-index: 2
+      background: linear-gradient(180deg, #F3AC96 0%, $yellow 97.79%)
+
+      position: relative
+      &:after
+        content: ''
+        background-image: url('../img/hexgrey.svg')
+        background-size: contain
+        background-repeat: repeat-y
+        opacity: 0.1
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: 0
+
+    &:nth-of-type(4)
+      background: linear-gradient(180deg, $yellow 0%, $grey 100%)
 
       position: relative
       &:after
@@ -268,40 +298,15 @@ section
 
         
 
-    &:nth-of-type(4)
-      // z-index: 2
-      background: linear-gradient(0deg, #262E41 0%, #F3AC96 97.79%)
-
-      position: relative
-      &:after
-        content: ''
-        background-image: url('../img/hexgrey.svg')
-        background-size: contain
-        background-repeat: repeat-y
-        opacity: 0.1
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
-        position: absolute
-        z-index: 0
-
     &:nth-of-type(5)
       // z-index: 1
-      background: linear-gradient(0deg, #07314A 0%, #262E41 97.79%)
+      background: linear-gradient(0deg, $grey 0%, $grey 97.79%)
 
-      position: relative
-      &:after
-        content: ''
-        background-image: url('../img/stars.svg')
-        background-size: contain
-        background-repeat: repeat-y
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
-        position: absolute
-        z-index: 0
+      color: black
+      button
+        background: black
+        color: white
+
 
 
     .clip
