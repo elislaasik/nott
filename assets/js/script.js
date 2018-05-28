@@ -1,16 +1,13 @@
-//everything that needs the html to be ready
-// if 'start' is pressed show only section id=audio
-$(document).ready(function() {
-    // if page is loaded then only show the frontpage
-  $(".hidden" ).hide();
 
-//for every read button
-   $(".read").on("click", function(){
-     //with data target
-     var targetName = this.getAttribute("data-target");
-     //get by that target name
-     var targetElement = document.getElementById(targetName);
-     //then display it
-     targetElement.style.display = "block";
+$(document).ready(function() { //when html is ready
+
+   $(".read").on("click", function(){ //for every read button
+     var targetName = this.getAttribute("data-target"); //with data target
+     var targetElement = document.getElementById(targetName); //get by that target name
+     targetElement.classList.add("open"); //then display it
+   });
+
+   $(".modal").on("click", function(){ // when the modal is clicked
+     this.classList.remove("open"); // hide it
    });
 });
